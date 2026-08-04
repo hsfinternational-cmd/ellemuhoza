@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0c1c15;
+  --color-ink-soft: #14291f;
+  --color-forest: #1b3a2b;
+  --color-cream: #faf6ee;
+  --color-parchment: #f2e9d9;
+  --color-gold: #b9954f;
+  --color-gold-light: #d8bb7c;
+  --color-champagne: #e8d7b4;
+
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-script: var(--font-great-vibes), cursive;
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* `clip` rather than `hidden`: it contains any stray horizontal overflow
+   without turning the element into a scroll container, which would move the
+   scrollport off the document and break anchor scrolling and scroll-driven UI. */
+html {
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-cream);
+}
+
+/* Letter-spaced small caps used for every eyebrow label on the page. */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+/* Thin gold rule that fades out at both ends. */
+@utility rule-gold {
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold),
+    transparent
+  );
+}
+
+/* Scroll-reveal: elements start displaced and are released by an
+   IntersectionObserver adding [data-visible]. Skipped under reduced motion,
+   and overridden by a <noscript> style in the root layout. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal][data-visible] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -3%, 0) scale(1.06);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-drift {
+    animation: drift 24s ease-in-out infinite;
+  }
+
+  .animate-scroll-cue {
+    animation: scroll-cue 2.4s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background-size: 200% auto;
+    animation: shimmer 6s linear infinite;
+  }
+}
