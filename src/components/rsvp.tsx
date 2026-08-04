@@ -40,30 +40,30 @@ export function Rsvp() {
   return (
     <section
       id="rsvp"
-      className="scroll-mt-20 bg-cream px-6 py-24 sm:py-32"
+      className="scroll-mt-20 bg-ivory px-6 py-24 sm:py-32"
     >
       <div className="mx-auto max-w-2xl">
         <div className="text-center">
-          <p className="eyebrow text-gold">Kindly respond</p>
-          <h2 className="mt-6 font-display text-3xl text-balance text-ink sm:text-5xl">
+          <p className="eyebrow text-rose-gold">Kindly respond</p>
+          <h2 className="mt-6 font-display text-3xl text-balance text-deep-wine sm:text-5xl">
             Reserve your seat
           </h2>
-          <p className="mt-6 font-serif text-xl font-light text-ink/70">
+          <p className="mt-6 font-serif text-xl font-light text-deep-wine/70">
             {event.dateLabel} · {event.venueLabel}, {event.venueCity}
           </p>
         </div>
 
         {status === "sent" ? (
-          <div className="mt-14 border border-gold/40 bg-parchment p-12 text-center">
-            <p className="font-script text-5xl text-gold">Thank you</p>
-            <p className="mt-6 font-serif text-xl font-light text-ink/75">
+          <div className="mt-14 border border-rose-gold/40 bg-blush p-12 text-center">
+            <p className="script text-5xl text-rose-gold">Thank you</p>
+            <p className="mt-6 font-serif text-xl font-light text-deep-wine/75">
               Your response has been received. We look forward to celebrating
               this milestone with you.
             </p>
             <button
               type="button"
               onClick={() => setStatus("idle")}
-              className="eyebrow mt-8 text-ink/50 underline underline-offset-8 transition-colors hover:text-gold"
+              className="eyebrow mt-8 text-deep-wine/50 underline underline-offset-8 transition-colors hover:text-rose-gold"
             >
               Submit another response
             </button>
@@ -86,11 +86,11 @@ export function Rsvp() {
             />
 
             <label className="grid gap-3">
-              <span className="eyebrow text-ink/50">Number attending</span>
+              <span className="eyebrow text-deep-wine/50">Number attending</span>
               <select
                 name="guests"
                 defaultValue="1"
-                className="appearance-none border-b border-ink/20 bg-transparent pt-1 pb-3 font-serif text-xl text-ink transition-colors focus:border-gold focus:outline-none"
+                className="appearance-none border-b border-deep-wine/20 bg-transparent pt-1 pb-3 font-serif text-xl text-deep-wine transition-colors focus:border-rose-gold focus:outline-none"
               >
                 {[1, 2, 3, 4, 5].map((n) => (
                   <option key={n} value={n}>
@@ -101,13 +101,13 @@ export function Rsvp() {
             </label>
 
             <label className="grid gap-3">
-              <span className="eyebrow text-ink/50">
+              <span className="eyebrow text-deep-wine/50">
                 A message for Elle (optional)
               </span>
               <textarea
                 name="message"
                 rows={3}
-                className="resize-none border-b border-ink/20 bg-transparent pt-1 pb-3 font-serif text-xl text-ink transition-colors focus:border-gold focus:outline-none"
+                className="resize-none border-b border-deep-wine/20 bg-transparent pt-1 pb-3 font-serif text-xl text-deep-wine transition-colors focus:border-rose-gold focus:outline-none"
               />
             </label>
 
@@ -120,7 +120,7 @@ export function Rsvp() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="eyebrow mt-2 justify-self-start rounded-full bg-ink px-12 py-4 text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-cream focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+              className="eyebrow mt-2 justify-self-start rounded-full bg-deep-wine px-12 py-4 text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:bg-burgundy focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ivory focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
             >
               {status === "sending" ? "Sending…" : "Confirm attendance"}
             </button>
@@ -146,16 +146,16 @@ function Field({
 }) {
   return (
     <label className="grid gap-3">
-      <span className="eyebrow text-ink/50">
+      <span className="eyebrow text-deep-wine/50">
         {label}
-        {required && <span className="text-gold"> *</span>}
+        {required && <span className="text-rose-gold"> *</span>}
       </span>
       <input
         name={name}
         type={type}
         required={required}
         autoComplete={autoComplete}
-        className="border-b border-ink/20 bg-transparent pt-1 pb-3 font-serif text-xl text-ink transition-colors focus:border-gold focus:outline-none"
+        className="border-b border-deep-wine/20 bg-transparent pt-1 pb-3 font-serif text-xl text-deep-wine transition-colors focus:border-rose-gold focus:outline-none"
       />
     </label>
   );

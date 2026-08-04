@@ -9,6 +9,8 @@ export const event = {
   honouree: "Elle Trivia Muhoza",
   crown: "Miss World Uganda",
   competition: "Miss World",
+  /** Displayed in the scrolling ticker band beneath the hero. */
+  competitionEdition: "Miss World 2026",
   tagline: "One Story. One Nation. One Purpose.",
 
   dateLabel: "Thursday, 6th August 2026",
@@ -30,6 +32,16 @@ export const event = {
    * Landscape or square crops around 2000px wide work best.
    */
   heroImage: "" as string,
+
+  /**
+   * Crest for the opening seal — the rose-gold master monogram from Elle's
+   * brand identity guide (Elle Cares Initiative), extracted to a transparent
+   * PNG. Leave empty to fall back to a typeset monogram instead.
+   */
+  sealLogo: "/elle-crest.png" as string,
+  /** Full lockup (monogram + wordmark), used small in the footer. */
+  wordmark: "/elle-wordmark.png" as string,
+  monogram: "EM",
 
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Mestil+Hotel+%26+Residences+Kampala",

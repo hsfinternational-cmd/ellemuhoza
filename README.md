@@ -37,6 +37,48 @@ It renders behind the existing vignette and gold frame, so the headline stays
 readable. Leave it empty and the hero uses the gradient stage alone. A wide crop
 around 2000px works best.
 
+## The opening seal
+
+First visit in a browser session shows a full-screen "wax seal" gate — tap
+it and it cracks in two, then dissolves into the invitation underneath. It
+only shows once per session (tracked in `sessionStorage`): a refresh
+mid-visit won't replay it, a new tab will.
+
+The seal is stamped with Elle's real master monogram, pulled from her brand
+guide. To swap the crest for a different file, drop it in `public/` and
+point `sealLogo` at it in `src/lib/event.ts`:
+
+```ts
+sealLogo: "/elle-crest.png",
+```
+
+If `sealLogo` is ever cleared, the seal falls back to a typeset monogram
+automatically — no other changes needed.
+
+## Brand identity
+
+Colors, typography and the logo follow *Elle Muhoza — Brand Identity Guide
+(Master Reference Edition)*:
+
+- **Colors** — ivory and blush are backgrounds ("breathing space"); burgundy
+  and deep wine carry text, headings and buttons ("authority"); rose gold is
+  reserved for the logo and fine accents (eyebrow labels, hairline rules, the
+  seal). All six live as tokens at the top of
+  [`src/app/globals.css`](src/app/globals.css) (`--color-ivory`,
+  `--color-deep-wine`, `--color-rose-gold`, etc.) — change the hex there and
+  the whole site follows.
+- **Typography** — Cormorant Garamond for headings and titles, Manrope for
+  body copy and labels, exactly as the guide specifies. There's no separate
+  script typeface; the italic style of Cormorant Garamond (loaded via the
+  `script` utility class) stands in for it.
+- **Logo** — `public/elle-crest.png` (monogram alone) and
+  `public/elle-wordmark.png` (monogram + "Elle Cares" wordmark) were
+  extracted from the brand guide's master files, which were rendered on a
+  solid black canvas. Both were re-keyed to true transparency by hand (there's
+  no ImageMagick or Python/PIL on this machine) — if a cleaner source export
+  ever becomes available, replace these two files directly and every
+  reference to them keeps working.
+
 ## Collecting RSVPs
 
 The form posts to `/api/rsvp`. With no configuration the server validates the
@@ -76,8 +118,10 @@ at 75 octets so strict clients like Outlook accept it.
 
 ## Notes
 
-- Scroll reveals are driven by `IntersectionObserver`, skipped entirely under
-  `prefers-reduced-motion`, and overridden by a `<noscript>` style — the
-  invitation is never hidden behind JavaScript that failed to run.
-- Fonts (Playfair Display, Cormorant Garamond, Manrope, Great Vibes) are
+- Scroll reveals and the opening seal are both skipped under
+  `prefers-reduced-motion` (the seal still requires a tap, just with a plain
+  crossfade instead of the crack-and-split), and both are overridden by a
+  `<noscript>` style — the invitation is never left hidden behind JavaScript
+  that failed to run.
+- Fonts (Cormorant Garamond — normal and italic — and Manrope) are
   self-hosted through `next/font`, so no requests go to Google at runtime.

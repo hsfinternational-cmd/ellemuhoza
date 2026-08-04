@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Reveal } from "@/components/reveal";
 import { event } from "@/lib/event";
 
 const TARGET = event.startsAt.getTime();
@@ -50,9 +51,9 @@ export function Countdown() {
   const counting = tick?.phase === "before";
 
   return (
-    <section className="bg-forest px-6 py-24 text-cream sm:py-28">
+    <section className="bg-burgundy px-6 py-24 text-ivory sm:py-28">
       <div className="mx-auto max-w-4xl text-center">
-        <p className="eyebrow text-gold-light">
+        <p className="eyebrow text-rose-gold">
           {tick && !counting ? "The celebration" : "The send-off begins in"}
         </p>
 
@@ -61,21 +62,29 @@ export function Countdown() {
           className="mt-12 grid grid-cols-4 gap-2 transition-opacity duration-700 sm:gap-6"
           style={{ opacity: counting ? 1 : 0 }}
         >
-          <Unit value={tick?.time?.days} label="Days" />
-          <Unit value={tick?.time?.hours} label="Hours" />
-          <Unit value={tick?.time?.minutes} label="Minutes" />
-          <Unit value={tick?.time?.seconds} label="Seconds" />
+          <Reveal as="div" delay={0}>
+            <Unit value={tick?.time?.days} label="Days" />
+          </Reveal>
+          <Reveal as="div" delay={90}>
+            <Unit value={tick?.time?.hours} label="Hours" />
+          </Reveal>
+          <Reveal as="div" delay={180}>
+            <Unit value={tick?.time?.minutes} label="Minutes" />
+          </Reveal>
+          <Reveal as="div" delay={270}>
+            <Unit value={tick?.time?.seconds} label="Seconds" />
+          </Reveal>
         </div>
 
         {tick && !counting && (
-          <p className="mt-12 font-display text-2xl text-balance text-champagne sm:text-4xl">
+          <p className="mt-12 font-display text-2xl text-balance text-blush sm:text-4xl">
             {tick.phase === "after"
               ? "Thank you for celebrating with us."
               : "Today is the day. We look forward to welcoming you."}
           </p>
         )}
 
-        <p className="mt-14 font-serif text-lg font-light text-cream/60">
+        <p className="mt-14 font-serif text-lg font-light text-ivory/60">
           {event.dateLabel} · {event.timeLabel} · {event.timezone}
         </p>
       </div>
@@ -84,12 +93,19 @@ export function Countdown() {
 }
 
 function Unit({ value, label }: { value?: number; label: string }) {
+  const display = String(value ?? 0).padStart(2, "0");
+
   return (
-    <div className="border border-cream/12 px-2 py-6 sm:px-4 sm:py-8">
-      <p className="font-display text-4xl tabular-nums sm:text-6xl">
-        {String(value ?? 0).padStart(2, "0")}
-      </p>
-      <p className="eyebrow mt-3 text-[0.6rem] text-gold-light sm:text-[0.65rem]">
+    <div className="border border-ivory/12 px-2 py-6 sm:px-4 sm:py-8">
+      <div style={{ perspective: "400px" }}>
+        <p
+          key={display}
+          className="animate-flip-in font-display text-4xl tabular-nums [backface-visibility:hidden] [transform-origin:50%_100%] sm:text-6xl"
+        >
+          {display}
+        </p>
+      </div>
+      <p className="eyebrow mt-3 text-[0.6rem] text-rose-gold sm:text-[0.65rem]">
         {label}
       </p>
     </div>
