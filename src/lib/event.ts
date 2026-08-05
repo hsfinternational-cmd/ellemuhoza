@@ -46,6 +46,15 @@ export const event = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Mestil+Hotel+%26+Residences+Kampala",
 
+  /** RSVPs are handled by Tracy directly over WhatsApp rather than a form. */
+  rsvp: {
+    contactName: "Tracy Mutoni",
+    /** Shown to guests as a readable fallback number. */
+    phoneDisplay: "+256 761 584386",
+    /** wa.me format: digits only, country code first, no leading "+". */
+    whatsappNumber: "256761584386",
+  },
+
   intro:
     "As Elle embarks on her journey to represent Uganda at the Miss World competition, we invite you to join us for an inspiring evening celebrating purpose, service, and national pride.",
   book: "The event will also mark the official launch of her book, sharing the story, vision, and advocacy that have shaped her journey as Miss World Uganda.",

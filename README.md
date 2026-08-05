@@ -81,36 +81,22 @@ Colors, typography and the logo follow *Elle Muhoza — Brand Identity Guide
   ever becomes available, replace these two files directly and every
   reference to them keeps working.
 
-## Collecting RSVPs
+## RSVPs
 
-The form posts to `/api/rsvp`. With no configuration the server validates the
-submission and logs it to the console — fine for a first look, but responses are
-not stored anywhere.
+RSVPs go straight to WhatsApp rather than a form — the button in
+[`Rsvp`](src/components/rsvp.tsx) opens a `wa.me` chat with a pre-filled
+message, addressed to whoever is set in `src/lib/event.ts`:
 
-To actually collect them, set `RSVP_WEBHOOK_URL` to any endpoint that accepts a
-JSON `POST` (Google Apps Script bound to a Sheet, Zapier, Formspree, a Slack
-incoming webhook):
-
-```bash
-cp .env.example .env.local
+```ts
+rsvp: {
+  contactName: "Tracy Mutoni",
+  phoneDisplay: "+256 761 584386",
+  whatsappNumber: "256761584386", // digits only, country code first
+},
 ```
 
-Each RSVP is forwarded as:
-
-```json
-{
-  "name": "…",
-  "email": "…",
-  "phone": "…",
-  "organisation": "…",
-  "guests": 2,
-  "message": "…",
-  "submittedAt": "2026-08-04T09:12:00.000Z"
-}
-```
-
-If the webhook is unreachable the guest sees an error and can retry, so a
-misconfigured URL fails loudly rather than silently dropping responses.
+Change the coordinator here and both the button and the phone-call fallback
+link update together.
 
 ## Add to calendar
 
