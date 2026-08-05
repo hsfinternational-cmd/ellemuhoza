@@ -1,7 +1,7 @@
 # Elle World
 
-Digital invitation for the **Official Send-Off & Book Launch** of Elle Trivia
-Muhoza, Miss World Uganda — hosted by the Fairfield Charity Foundation.
+Digital invitation for the **Official Flagging Off & Book Launch** of Elle
+Trivia Muhoza, Miss World Uganda — hosted by the Fairfield Charity Foundation.
 
 Thursday, 6th August 2026 · 4:00 PM – 7:00 PM · Mestil Hotel & Residences, Kampala.
 
@@ -24,25 +24,27 @@ one file: [`src/lib/event.ts`](src/lib/event.ts). Change it there and every
 section, the page metadata, and the calendar file update together. Nothing else
 needs touching for a change of time or venue.
 
-## Adding Elle's photograph
+## Elle's photograph
 
-Drop the image into `public/` and point `heroImage` at it in
+The hero backdrop is `public/heroelle.jpg`, set via `heroImage` in
 `src/lib/event.ts`:
 
 ```ts
-heroImage: "/elle-hero.jpg",
+heroImage: "/heroelle.jpg",
 ```
 
-It renders behind the existing vignette and gold frame, so the headline stays
-readable. Leave it empty and the hero uses the gradient stage alone. A wide crop
-around 2000px works best.
+It renders behind the existing vignette and rose-gold frame, so the headline
+stays readable. Clearing the value falls back to the gradient stage alone. To
+swap the photo, drop a new file in `public/` and point `heroImage` at it — a
+wide crop around 2000px works best.
 
 ## The opening seal
 
-First visit in a browser session shows a full-screen "wax seal" gate — tap
-it and it cracks in two, then dissolves into the invitation underneath. It
-only shows once per session (tracked in `sessionStorage`): a refresh
-mid-visit won't replay it, a new tab will.
+First visit in a browser session shows a full-screen "wax seal" gate that
+breathes gently while it waits — tap it and it dips like a pressed button,
+then blooms outward and dissolves into the invitation underneath. It only
+shows once per session (tracked in `sessionStorage`): a refresh mid-visit
+won't replay it, a new tab will.
 
 The seal is stamped with Elle's real master monogram, pulled from her brand
 guide. To swap the crest for a different file, drop it in `public/` and

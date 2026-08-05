@@ -5,7 +5,7 @@
 
 export const event = {
   host: "Fairfield Charity Foundation",
-  title: "Official Send-Off & Book Launch",
+  title: "Official Flagging Off & Book Launch",
   honouree: "Elle Trivia Muhoza",
   crown: "Miss World Uganda",
   competition: "Miss World",
@@ -31,7 +31,7 @@ export const event = {
    * (e.g. "/elle-hero.jpg"); leave empty to use the gradient stage alone.
    * Landscape or square crops around 2000px wide work best.
    */
-  heroImage: "" as string,
+  heroImage: "/heroelle.jpg" as string,
 
   /**
    * Crest for the opening seal — the rose-gold master monogram from Elle's
@@ -50,7 +50,7 @@ export const event = {
     "As Elle embarks on her journey to represent Uganda at the Miss World competition, we invite you to join us for an inspiring evening celebrating purpose, service, and national pride.",
   book: "The event will also mark the official launch of her book, sharing the story, vision, and advocacy that have shaped her journey as Miss World Uganda.",
   guests:
-    "Join government leaders, partners, sponsors, media, former queens, friends, and supporters as we officially send Elle off to represent Uganda on the world stage and celebrate the launch of her inspiring publication.",
+    "Join government leaders, partners, sponsors, media, former queens, friends, and supporters as we officially flag Elle off to represent Uganda on the world stage and celebrate the launch of her inspiring publication.",
 } as const;
 
 export const details = [

@@ -37,7 +37,7 @@ export function Hero() {
           {event.honouree}
         </p>
 
-        <p className="eyebrow mt-6 text-ivory/80">The {event.crown}</p>
+        <p className="eyebrow mt-6 text-ivory/80">{event.crown}</p>
 
         <div className="mt-12 flex flex-col items-center gap-3 font-serif text-lg text-blush/90 sm:flex-row sm:gap-5 sm:text-xl">
           <span>{event.dateLabel}</span>
@@ -86,8 +86,8 @@ function Backdrop() {
   return (
     <div aria-hidden className="absolute inset-0">
       <div
-        className={`animate-drift absolute inset-0 bg-cover bg-center ${
-          portrait ? "opacity-45" : "opacity-70"
+        className={`animate-drift absolute inset-0 bg-cover ${
+          portrait ? "bg-[center_20%] opacity-60" : "bg-center opacity-70"
         }`}
         style={{
           backgroundImage: portrait

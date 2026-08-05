@@ -20,18 +20,25 @@ export function BookLaunch() {
         </Reveal>
 
         <Reveal delay={160}>
-          <div className="relative mx-auto flex aspect-[3/4] w-full max-w-sm items-center justify-center overflow-hidden bg-[linear-gradient(150deg,#7a1f3d_0%,#561020_55%,#3a0a16_100%)]">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element -- fixed feature photo for this card */}
+            <img
+              src={encodeURI("/Elle pic1.jpeg")}
+              alt="Elle Muhoza in a bridal-style gown"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-deep-wine via-deep-wine/15 to-transparent" />
             <div className="absolute inset-4 border border-rose-gold/25" />
-            <div className="relative px-10 text-center">
+            <div className="absolute inset-x-0 bottom-0 px-8 pb-8 text-center">
               <p className="eyebrow text-rose-gold">{event.crown}</p>
-              <p className="script mt-8 text-5xl text-blush">
+              <p className="script mt-4 text-4xl text-blush sm:text-5xl">
                 {event.honouree}
               </p>
-              <span className="mx-auto mt-8 block h-px w-16 bg-rose-gold/60" />
-              <p className="mt-8 font-serif text-lg font-light tracking-wide text-ivory/60">
+              <span className="mx-auto mt-6 block h-px w-16 bg-rose-gold/60" />
+              <p className="mt-6 font-serif text-lg font-light tracking-wide text-ivory/70">
                 Official book launch
               </p>
-              <p className="mt-1 font-serif text-lg font-light tracking-wide text-ivory/60">
+              <p className="mt-1 font-serif text-lg font-light tracking-wide text-ivory/70">
                 {event.dateShort}
               </p>
             </div>

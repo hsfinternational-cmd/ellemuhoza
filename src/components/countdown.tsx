@@ -54,7 +54,7 @@ export function Countdown() {
     <section className="bg-burgundy px-6 py-24 text-ivory sm:py-28">
       <div className="mx-auto max-w-4xl text-center">
         <p className="eyebrow text-rose-gold">
-          {tick && !counting ? "The celebration" : "The send-off begins in"}
+          {tick && !counting ? "The celebration" : "The flagging off begins in"}
         </p>
 
         <div

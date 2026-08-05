@@ -36,10 +36,6 @@ export const galleryImages: GalleryImage[] = [
     alt: "Elle Muhoza smiling in a traditional beaded gown",
   },
   {
-    src: "/IMG_6236.jpg",
-    alt: "Elle Muhoza in a traditional beaded gown, hands at her collarbone",
-  },
-  {
     src: "/IMG_6237.jpg",
     alt: "Studio portrait of Elle Muhoza in a traditional beaded gown",
   },
@@ -62,5 +58,13 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/Screenshot 2026-02-17 at 09.57.25-web.jpg",
     alt: "Miss World 2026 'First Hotpicks' graphic featuring Elle Muhoza representing Uganda",
+  },
+  {
+    src: "/Elle pic2.jpeg",
+    alt: "Outdoor portrait of Elle Muhoza wearing her crown, with greenery in the background",
+  },
+  {
+    src: "/elle pic 3.jpeg",
+    alt: "Full-length portrait of Elle Muhoza in a white gown",
   },
 ];

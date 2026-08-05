@@ -55,7 +55,7 @@ export function GET() {
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     "BEGIN:VEVENT",
-    "UID:elle-trivia-muhoza-send-off-2026@fairfieldcharityfoundation.org",
+    "UID:elle-trivia-muhoza-flagging-off-2026@fairfieldcharityfoundation.org",
     `DTSTAMP:${toIcsUtc(new Date("2026-08-04T00:00:00Z"))}`,
     `DTSTART:${toIcsUtc(event.startsAt)}`,
     `DTEND:${toIcsUtc(event.endsAt)}`,
@@ -72,7 +72,7 @@ export function GET() {
   return new Response(ics, {
     headers: {
       "Content-Type": "text/calendar; charset=utf-8",
-      "Content-Disposition": 'attachment; filename="elle-send-off.ics"',
+      "Content-Disposition": 'attachment; filename="elle-flagging-off.ics"',
     },
   });
 }
