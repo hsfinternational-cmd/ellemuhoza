@@ -81,23 +81,67 @@ export const advocacy = {
   eyebrow: "The Purpose",
   title: "A global stage for women and girls to be safe, seen, and free.",
   intro:
-    "In her presentation, Elle speaks as an aviator, entrepreneur, author, and advocate shaped by witnessing violence at home and choosing to turn that pain into protection for others.",
+    "Elle's platform connects her lived story with Fairfield Charity Foundation's community-rooted work: practical care, trusted partnerships, and long-term opportunity for children, women, and families.",
   pillars: [
     {
       label: "Elle Cares Initiative",
-      text: "School clubs and grassroots conversations that teach respect, love, equality, and early awareness around gender-based violence.",
+      text: "School clubs and grassroots conversations that teach respect, love, equality, and early awareness around safer relationships.",
     },
     {
-      label: "Women’s Skilling",
-      text: "Practical skills training and mental-health awareness for women rebuilding hope, income, and independence for their families.",
+      label: "Women’s Dignity & Opportunity",
+      text: "Dignity-centred support, menstrual-health outreach, practical opportunity, skills, and stronger pathways toward economic participation.",
     },
     {
-      label: "Girl Up App",
-      text: "A safety and empowerment tool with SOS support, financial literacy, community conversation, and a savings feature.",
+      label: "Families & Wellbeing",
+      text: "Community conversations around emotional wellbeing, safer homes, respectful relationships, and family stability.",
     },
     {
       label: "Spoiler Alert: You Survived",
       text: "A book about healing over time, reclaiming confidence, and reminding women that they are not walking alone.",
+    },
+  ],
+} as const;
+
+export const foundation = {
+  eyebrow: "Fairfield Connection",
+  title: "Where Elle's platform meets community-rooted action.",
+  intro:
+    "Fairfield Charity Foundation was founded in 2019 to strengthen the emotional, physical, educational, nutritional, and economic foundations that help families and communities thrive.",
+  stats: [
+    { value: "2019", label: "Year Fairfield was founded" },
+    { value: "6", label: "Connected programme areas" },
+    { value: "1", label: "Locally rooted mission" },
+  ],
+  method: [
+    {
+      label: "Listen locally",
+      text: "Begin with people, lived experience, and the conditions shaping a community.",
+    },
+    {
+      label: "Connect the causes",
+      text: "Treat education, health, dignity, opportunity, and family stability as connected foundations.",
+    },
+    {
+      label: "Act with partners",
+      text: "Bring together local leadership, volunteers, organisations, and practical resources.",
+    },
+    {
+      label: "Build toward ownership",
+      text: "Support confidence, capability, and long-term community participation.",
+    },
+  ],
+  initiatives: [
+    {
+      label: "Back to School Drive",
+      text: "Education-focused outreach, practical giving, learning support, and partnerships shaped by local needs.",
+    },
+    {
+      label: "Cleanette Uganda",
+      text: "A dignity initiative improving access to menstrual-health products for schools, shelters, and public spaces.",
+    },
+    {
+      label: "Umoja Women’s Run",
+      text: "A public-mobilisation initiative for awareness, community participation, and locally supported safety nets for women affected by gender-based violence.",
     },
   ],
 } as const;
@@ -112,16 +156,6 @@ export const resources = [
     label: "Elle Muhoza Profile 2026",
     meta: "Full profile, platform, achievements, and partnerships",
     href: "/docs/elle-muhoza-profile-2026.pdf",
-  },
-  {
-    label: "Impact Profile 2026",
-    meta: "Advocacy background and community impact work",
-    href: "/docs/elle-muhoza-impact-profile-2026.pdf",
-  },
-  {
-    label: "Send-Off Booklet",
-    meta: "Programme booklet and event-facing profile",
-    href: "/docs/elle-sendoff-booklet.pdf",
   },
 ] as const;
 

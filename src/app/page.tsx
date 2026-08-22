@@ -1,6 +1,7 @@
 import { Advocacy } from "@/components/advocacy";
 import { BookLaunch } from "@/components/book-launch";
 import { Footer } from "@/components/footer";
+import { Foundation } from "@/components/foundation";
 import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/hero";
 import { Links } from "@/components/links";
@@ -13,6 +14,7 @@ export default function Page() {
       <Hero />
       <Marquee />
       <Advocacy />
+      <Foundation />
       <BookLaunch />
       <Resources />
       <Gallery />

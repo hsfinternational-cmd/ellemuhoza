@@ -11,11 +11,11 @@ export function Resources() {
         <Reveal className="max-w-3xl">
           <p className="eyebrow text-rose-gold">Downloads</p>
           <h2 className="mt-6 font-display text-3xl leading-tight text-balance sm:text-5xl">
-            Books, profiles, and campaign material.
+            The book and official profile.
           </h2>
           <p className="mt-8 font-serif text-xl leading-relaxed font-light text-deep-wine/75 sm:text-2xl">
-            These files are now part of the website source, so Vercel can serve
-            them directly and we can update or replace them from this repo.
+            Only verified files stay here: Elle&apos;s book and her official
+            profile.
           </p>
         </Reveal>
 

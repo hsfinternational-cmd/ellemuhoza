@@ -16,8 +16,6 @@ Public PDFs live in `public/docs/` and are served directly by Vercel:
 
 1. `spoiler-alert-you-survived.pdf`
 2. `elle-muhoza-profile-2026.pdf`
-3. `elle-muhoza-impact-profile-2026.pdf`
-4. `elle-sendoff-booklet.pdf`
 
 ## Local Commands
 
