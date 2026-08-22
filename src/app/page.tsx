@@ -7,6 +7,7 @@ import { Hero } from "@/components/hero";
 import { Links } from "@/components/links";
 import { Marquee } from "@/components/marquee";
 import { Press } from "@/components/press";
+import { ProjectPortfolio } from "@/components/project-portfolio";
 import { Resources } from "@/components/resources";
 import { TheApplication } from "@/components/the-application";
 
@@ -17,6 +18,7 @@ export default function Page() {
       <Marquee />
       <Advocacy />
       <Foundation />
+      <ProjectPortfolio />
       <Press />
       <TheApplication />
       <BookLaunch />

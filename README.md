@@ -8,7 +8,8 @@ Official platform for **Elle Trivia Muhoza**, Miss World Uganda.
 2. Core copy, links, and downloads: `src/lib/event.ts`
 3. Hero: `src/components/hero.tsx`
 4. Purpose/story: `src/components/advocacy.tsx`
-5. Book and downloads: `src/components/book-launch.tsx` and `src/components/resources.tsx`
+5. Projects: `src/components/project-portfolio.tsx`
+6. Book and downloads: `src/components/book-launch.tsx` and `src/components/resources.tsx`
 
 ## Uploaded Files
 
