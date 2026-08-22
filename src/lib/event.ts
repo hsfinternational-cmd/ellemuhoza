@@ -159,6 +159,66 @@ export const resources = [
   },
 ] as const;
 
+export const press = [
+  {
+    source: "Pulse Uganda",
+    title: "Miss Uganda turns personal struggles into book ahead of Miss World",
+    meta: "Book launch, healing, resilience, and the road to Miss World",
+    href: "https://www.pulse.ug/story/miss-uganda-elle-muhoza-book-launch-miss-world-2026080711285901801",
+  },
+  {
+    source: "New Vision",
+    title: "Miss Uganda Elle Muhoza launches healing memoir",
+    meta: "Coverage of SPO!LER Alert - You Survived and Elle's send-off",
+    href: "https://www.newvision.co.ug/category/entertainment/miss-uganda-elle-muhoza-launches-healing-memo-NV_238556_082026",
+  },
+  {
+    source: "Miss World",
+    title: "Muhoza Trivia Elle continues Beauty With a Purpose work in Mbikko",
+    meta: "Safe spaces, self-worth, confidence, and youth encouragement",
+    href: "https://www.missworld.com/news/miss-world-uganda-muhoza-trivia-elle-continues-beauty-with-a-purpose-work-in-mbikko",
+  },
+  {
+    source: "New Vision",
+    title: "Elle Trivia Muhoza crowned Miss Uganda 2025/26",
+    meta: "Live coverage of Elle's national crowning moment",
+    href: "https://www.newvision.co.ug/category/entertainment/elle-trivia-muhoza-crowned-miss-uganda-202526-NV_218933",
+  },
+  {
+    source: "Fairfield Charity Foundation",
+    title: "Elle Trivia Muhoza, Global Ambassador",
+    meta: "Fairfield's profile of Elle's platform, service, and advocacy",
+    href: "https://fairfield-foundation-website.vercel.app/ambassador",
+  },
+] as const;
+
+export const application = {
+  eyebrow: "The Application",
+  title: "Girl Up App",
+  intro:
+    "Elle's presentation describes Girl Up as a safety and empowerment application built around urgent support, financial literacy, community, and saving habits.",
+  linkLabel: "Public app link pending",
+  href: "",
+  features: [
+    {
+      label: "SOS Support",
+      text: "A quick way to reach a trusted person when a woman or girl needs help.",
+    },
+    {
+      label: "Financial Literacy",
+      text: "Learning resources that support practical money confidence and independence.",
+    },
+    {
+      label: "Community Space",
+      text: "A conversation and support space for women and girls to know they are not alone.",
+    },
+    {
+      label: "Savings Feature",
+      text: "A simple structure for building saving habits toward practical goals.",
+    },
+  ],
+} as const;
+
 export const socialLinks = [
   {
     label: "Instagram",

@@ -6,7 +6,9 @@ import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/hero";
 import { Links } from "@/components/links";
 import { Marquee } from "@/components/marquee";
+import { Press } from "@/components/press";
 import { Resources } from "@/components/resources";
+import { TheApplication } from "@/components/the-application";
 
 export default function Page() {
   return (
@@ -15,6 +17,8 @@ export default function Page() {
       <Marquee />
       <Advocacy />
       <Foundation />
+      <Press />
+      <TheApplication />
       <BookLaunch />
       <Resources />
       <Gallery />
