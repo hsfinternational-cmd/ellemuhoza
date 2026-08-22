@@ -57,7 +57,9 @@ export const event = {
 
   intro:
     "Elle carries Uganda on the world stage with a mission shaped by courage: protecting women and girls, building financial independence, and turning survival into purpose.",
-  book: "Spoiler Alert: You Survived is Elle's book on healing, growth, confidence, and the long, courageous work of remembering your value.",
+  bookTitle: "Elle's Kindness Club",
+  book:
+    "Elle's Kindness Club is a children's book about kindness, empathy, and the everyday choices that help children care for one another.",
   guests:
     "Join government leaders, partners, sponsors, media, former queens, friends, and supporters as we officially flag Elle off to represent Uganda on the world stage and stand with the purpose she carries.",
 } as const;
@@ -96,8 +98,8 @@ export const advocacy = {
       text: "Community conversations around emotional wellbeing, safer homes, respectful relationships, and family stability.",
     },
     {
-      label: "Spoiler Alert: You Survived",
-      text: "A book about healing over time, reclaiming confidence, and reminding women that they are not walking alone.",
+      label: "Children’s Storytelling",
+      text: "Elle's Kindness Club brings her message of care and empathy to children through an accessible story format.",
     },
   ],
 } as const;
@@ -148,14 +150,69 @@ export const foundation = {
 
 export const resources = [
   {
-    label: "Spoiler Alert: You Survived",
-    meta: "Elle's book on healing, confidence, and survival",
-    href: "/docs/spoiler-alert-you-survived.pdf",
+    label: "Elle’s Kindness Club",
+    meta: "Children's book on kindness, empathy, and caring for others",
+    href: "/docs/elles-kindness-club.pdf",
   },
   {
     label: "Elle Muhoza Profile 2026",
     meta: "Full profile, platform, achievements, and partnerships",
     href: "/docs/elle-muhoza-profile-2026.pdf",
+  },
+] as const;
+
+export const bookLaunchPhotos = [
+  {
+    src: "/book-launch/book-launch-01.jpeg",
+    alt: "Elle signing books at her launch",
+  },
+  {
+    src: "/book-launch/book-launch-02.jpeg",
+    alt: "Elle holding a copy of Spoiler Alert: You Survived",
+  },
+  {
+    src: "/book-launch/book-launch-03.jpeg",
+    alt: "Elle with a guest at the book launch backdrop",
+  },
+  {
+    src: "/book-launch/book-launch-04.jpeg",
+    alt: "Elle and a guest holding the book at the launch",
+  },
+  {
+    src: "/book-launch/book-launch-05.jpeg",
+    alt: "Elle with supporters holding copies at the book launch",
+  },
+  {
+    src: "/book-launch/book-launch-06.jpeg",
+    alt: "Elle laughing with guests during the book launch",
+  },
+  {
+    src: "/book-launch/book-launch-07.jpeg",
+    alt: "Elle with guests holding books at the launch",
+  },
+  {
+    src: "/book-launch/book-launch-08.jpeg",
+    alt: "Elle signing copies during the book launch",
+  },
+  {
+    src: "/book-launch/book-launch-09.jpeg",
+    alt: "Elle with women holding copies of the book",
+  },
+  {
+    src: "/book-launch/book-launch-10.jpeg",
+    alt: "Elle speaking on stage during the launch event",
+  },
+  {
+    src: "/book-launch/book-launch-11.jpeg",
+    alt: "Elle and guests celebrating the book launch",
+  },
+  {
+    src: "/book-launch/book-launch-12.jpeg",
+    alt: "Elle on stage with hosts and guests at her send-off",
+  },
+  {
+    src: "/book-launch/book-launch-13.jpeg",
+    alt: "Elle with guests at the book launch stage",
   },
 ] as const;
 

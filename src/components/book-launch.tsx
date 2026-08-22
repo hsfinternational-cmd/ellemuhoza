@@ -1,49 +1,68 @@
 import { Reveal } from "@/components/reveal";
-import { event } from "@/lib/event";
+import { bookLaunchPhotos, event } from "@/lib/event";
 
 export function BookLaunch() {
   return (
-    <section id="book" className="scroll-mt-20 bg-deep-wine px-6 py-24 text-ivory sm:py-32">
-      <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2 lg:gap-24">
-        <Reveal>
-          <p className="eyebrow text-rose-gold">The Book</p>
+    <section
+      id="book-launch"
+      className="scroll-mt-20 bg-deep-wine px-6 py-24 text-ivory sm:py-32"
+    >
+      <div className="mx-auto max-w-6xl">
+        <Reveal className="max-w-3xl">
+          <p className="eyebrow text-rose-gold">Book Launch</p>
           <h2 className="mt-6 font-display text-3xl leading-tight text-balance sm:text-5xl">
             Spoiler Alert: You Survived
           </h2>
           <span className="mt-8 block h-px w-24 bg-rose-gold/60" />
           <p className="mt-8 font-serif text-xl leading-relaxed font-light text-blush/80">
-            {event.book}
+            Spoiler Alert: You Survived is Elle&apos;s separate healing memoir.
+            We do not have the soft copy on this site, but the launch remains an
+            important moment in her public story.
           </p>
           <p className="mt-6 font-serif text-xl leading-relaxed font-light text-blush/80">
-            The book sits alongside Elle&apos;s advocacy work: a practical reminder
-            that healing takes time, confidence can be rebuilt, and no woman has
-            to walk the journey alone.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+            The downloadable children&apos;s book available here is{" "}
             <a
-              href="/docs/spoiler-alert-you-survived.pdf"
+              href="/docs/elles-kindness-club.pdf"
               target="_blank"
               rel="noreferrer noopener"
-              className="eyebrow rounded-full bg-rose-gold px-8 py-4 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:bg-soft-rose focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
+              className="underline decoration-rose-gold underline-offset-4 transition-colors hover:text-rose-gold"
             >
-              Open PDF
+              {event.bookTitle}
             </a>
-            <a
-              href="#resources"
-              className="eyebrow rounded-full border border-ivory/25 px-8 py-4 text-ivory/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
-            >
-              View resources
-            </a>
-          </div>
+            .
+          </p>
         </Reveal>
 
-        <Reveal delay={160}>
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden">
+        <div className="mt-16 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {bookLaunchPhotos.map((photo, i) => (
+            <Reveal
+              as="div"
+              key={photo.src}
+              delay={(i % 8) * 60}
+              className={`group overflow-hidden border border-ivory/10 bg-burgundy ${
+                i === 0 || i === 7 || i === 11
+                  ? "sm:col-span-2 lg:col-span-2"
+                  : ""
+              }`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element -- launch photos are local event assets */}
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                loading={i < 4 ? "eager" : "lazy"}
+                className="aspect-[4/5] h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={160} className="mt-16">
+          <div className="relative overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element -- fixed feature photo for this card */}
             <img
-              src={encodeURI("/Elle pic1.jpeg")}
-              alt="Elle Muhoza in a bridal-style gown"
-              className="h-full w-full object-cover"
+              src="/book-launch/book-launch-08.jpeg"
+              alt="Elle signing books at the launch"
+              className="max-h-[520px] w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-deep-wine via-deep-wine/15 to-transparent" />
             <div className="absolute inset-4 border border-rose-gold/25" />

@@ -36,12 +36,12 @@ export function Hero() {
             Read her story
           </a>
           <a
-            href="/docs/spoiler-alert-you-survived.pdf"
+            href="/docs/elles-kindness-club.pdf"
             target="_blank"
             rel="noreferrer noopener"
             className="eyebrow rounded-full border border-ivory/30 px-10 py-4 text-ivory/90 transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
           >
-            Open the book
+            Open children&apos;s book
           </a>
         </div>
       </div>

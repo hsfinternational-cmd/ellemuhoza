@@ -14,7 +14,7 @@ Official platform for **Elle Trivia Muhoza**, Miss World Uganda.
 
 Public PDFs live in `public/docs/` and are served directly by Vercel:
 
-1. `spoiler-alert-you-survived.pdf`
+1. `elles-kindness-club.pdf`
 2. `elle-muhoza-profile-2026.pdf`
 
 ## Local Commands
