@@ -8,7 +8,7 @@ export function BookLaunch() {
         <Reveal>
           <p className="eyebrow text-rose-gold">The Book Launch</p>
           <h2 className="mt-6 font-display text-3xl leading-tight text-balance sm:text-5xl">
-            The story behind the crown, in her own words.
+            A book for the woman learning she survived.
           </h2>
           <span className="mt-8 block h-px w-24 bg-rose-gold/60" />
           <p className="mt-8 font-serif text-xl leading-relaxed font-light text-blush/80">
@@ -36,7 +36,7 @@ export function BookLaunch() {
               </p>
               <span className="mx-auto mt-6 block h-px w-16 bg-rose-gold/60" />
               <p className="mt-6 font-serif text-lg font-light tracking-wide text-ivory/70">
-                Official book launch
+                Spoiler Alert: You Survived
               </p>
               <p className="mt-1 font-serif text-lg font-light tracking-wide text-ivory/70">
                 {event.dateShort}

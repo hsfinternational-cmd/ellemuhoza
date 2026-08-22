@@ -11,7 +11,7 @@ export const event = {
   competition: "Miss World",
   /** Displayed in the scrolling ticker band beneath the hero. */
   competitionEdition: "Miss World 2026",
-  tagline: "One Story. One Nation. One Purpose.",
+  tagline: "Healing. Safety. Financial Freedom.",
 
   dateLabel: "Thursday, 6th August 2026",
   dayLabel: "Thursday",
@@ -56,10 +56,10 @@ export const event = {
   },
 
   intro:
-    "As Elle embarks on her journey to represent Uganda at the Miss World competition, we invite you to join us for an inspiring evening celebrating purpose, service, and national pride.",
-  book: "The event will also mark the official launch of her book, sharing the story, vision, and advocacy that have shaped her journey as Miss World Uganda.",
+    "As Elle embarks on her journey to represent Uganda at the Miss World competition, we invite you to join us for an inspiring evening celebrating the advocacy behind the crown: safety, dignity, healing, and economic freedom for women and girls.",
+  book: "The event will also mark the official launch of Spoiler Alert: You Survived, her book on healing, growth, confidence, and the long, courageous work of remembering your value.",
   guests:
-    "Join government leaders, partners, sponsors, media, former queens, friends, and supporters as we officially flag Elle off to represent Uganda on the world stage and celebrate the launch of her inspiring publication.",
+    "Join government leaders, partners, sponsors, media, former queens, friends, and supporters as we officially flag Elle off to represent Uganda on the world stage and stand with the purpose she carries.",
 } as const;
 
 export const details = [
@@ -76,3 +76,28 @@ export const guestList = [
   "Former queens",
   "Friends & supporters",
 ] as const;
+
+export const advocacy = {
+  eyebrow: "The Purpose",
+  title: "A global stage for women and girls to be safe, seen, and free.",
+  intro:
+    "In her presentation, Elle speaks as an aviator, entrepreneur, author, and advocate shaped by witnessing violence at home and choosing to turn that pain into protection for others.",
+  pillars: [
+    {
+      label: "Elle Cares Initiative",
+      text: "School clubs and grassroots conversations that teach respect, love, equality, and early awareness around gender-based violence.",
+    },
+    {
+      label: "Women’s Skilling",
+      text: "Practical skills training and mental-health awareness for women rebuilding hope, income, and independence for their families.",
+    },
+    {
+      label: "Girl Up App",
+      text: "A safety and empowerment tool with SOS support, financial literacy, community conversation, and a savings feature.",
+    },
+    {
+      label: "Spoiler Alert: You Survived",
+      text: "A book about healing over time, reclaiming confidence, and reminding women that they are not walking alone.",
+    },
+  ],
+} as const;

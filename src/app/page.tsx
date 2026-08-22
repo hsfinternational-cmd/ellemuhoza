@@ -1,3 +1,4 @@
+import { Advocacy } from "@/components/advocacy";
 import { BookLaunch } from "@/components/book-launch";
 import { Countdown } from "@/components/countdown";
 import { Details } from "@/components/details";
@@ -14,6 +15,7 @@ export default function Page() {
       <Hero />
       <Marquee />
       <Invitation />
+      <Advocacy />
       <Details />
       <Gallery />
       <BookLaunch />

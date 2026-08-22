@@ -33,7 +33,7 @@ export function Invitation() {
 
         <Reveal delay={340}>
           <p className="script mt-14 text-4xl text-rose-gold sm:text-5xl">
-            One Story. One Nation. One Purpose.
+            {event.tagline}
           </p>
         </Reveal>
       </div>
