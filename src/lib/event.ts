@@ -338,6 +338,22 @@ export const resources = [
   },
 ] as const;
 
+export const bookRelease = {
+  eyebrow: "The Book Is Out",
+  title: "Spoiler Alert: You Survived",
+  intro:
+    "Elle's healing memoir is now available to order. It is written for readers rebuilding after silence, survival, and the work of choosing themselves again.",
+  note:
+    "For copies, pricing, delivery, and pickup details, contact Tracy directly on WhatsApp.",
+  cover: "/book-cover/spoiler-alert-cover.jpg",
+  order: {
+    label: "Order via WhatsApp",
+    contactName: event.rsvp.contactName,
+    phoneDisplay: event.rsvp.phoneDisplay,
+    href: `https://wa.me/${event.rsvp.whatsappNumber}?text=Hello%20Tracy%2C%20I%27d%20like%20to%20order%20Spoiler%20Alert%3A%20You%20Survived.`,
+  },
+} as const;
+
 export const bookLaunchPhotos = [
   {
     src: "/book-launch/book-launch-01.jpeg",
