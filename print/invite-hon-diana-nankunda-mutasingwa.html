@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Elle Muhoza — Invitation for Hon. Diana Nankunda Mutasingwa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #561020;
+    background: #FFF8F5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 20mm;
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+    background: #FFF8F5;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .frame {
+    position: absolute;
+    inset: 8mm;
+    border: 1px solid rgba(183,110,121,0.35);
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    font-family: 'Manrope', sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #B76E79;
+  }
+  .eyebrow-muted { color: #561020; opacity: 0.5; }
+
+  .rule {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #B76E79, transparent);
+  }
+  .rule-solid { height: 1px; background: #B76E79; opacity: 0.5; }
+
+  .script { font-style: italic; }
+  p { margin: 0; }
+  h1, h2, h3 { margin: 0; font-weight: 500; }
+
+  /* ---------- PAGE 1 : COVER ---------- */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .crest { height: 42px; margin-top: 5mm; }
+  .cover-invite-line {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #561020;
+    opacity: 0.75;
+    margin-top: 6mm;
+  }
+  .guest-block { margin-top: 7mm; }
+  .guest-honorific {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #B76E79;
+  }
+  .guest-name {
+    font-size: 27px;
+    color: #561020;
+    margin-top: 2mm;
+  }
+  .guest-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: #561020;
+    opacity: 0.6;
+    margin-top: 2mm;
+  }
+  .cover-to-the {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #561020;
+    opacity: 0.6;
+    margin-top: 6mm;
+  }
+  .cover h1 {
+    font-size: 29px;
+    line-height: 1.16;
+    color: #561020;
+    margin: 4mm 0;
+    max-width: 145mm;
+  }
+  .cover-of {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #561020;
+    opacity: 0.55;
+    margin-top: 3mm;
+  }
+  .portrait-wrap { margin: 5mm 0 4mm; }
+  .portrait {
+    width: 36mm;
+    height: 36mm;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid rgba(183,110,121,0.6);
+    box-shadow: 0 0 0 4px #FFF8F5, 0 0 0 5px rgba(183,110,121,0.4);
+  }
+  .honouree-name {
+    font-size: 34px;
+    color: #7A1F3D;
+    margin-top: 2mm;
+  }
+  .crown-label { margin-top: 2mm; }
+  .cover-facts {
+    margin-top: 7mm;
+    font-size: 14.5px;
+    color: #561020;
+    display: flex;
+    gap: 4mm;
+    align-items: center;
+  }
+  .cover-facts .dot { color: #B76E79; }
+  .dress-code {
+    margin-top: 4mm;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #561020;
+    opacity: 0.55;
+  }
+  .cover-tagline {
+    margin-top: auto;
+    padding-top: 8mm;
+    font-size: 21px;
+    color: #B76E79;
+  }
+  .cover-host {
+    margin-top: 5mm;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #561020;
+    opacity: 0.6;
+  }
+
+  /* ---------- PAGE 2 : DETAILS ---------- */
+  .section-heading { font-size: 24px; color: #561020; margin-top: 3mm; }
+  .body-text {
+    font-size: 14.5px;
+    line-height: 1.75;
+    color: #561020;
+    opacity: 0.85;
+    font-weight: 300;
+    margin-top: 5mm;
+  }
+  .particulars {
+    margin-top: 9mm;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgba(86,16,32,0.15);
+  }
+  .particular-cell {
+    padding: 7mm 8mm;
+    border-right: 1px solid rgba(86,16,32,0.12);
+    border-bottom: 1px solid rgba(86,16,32,0.12);
+    background: #F7D6D0;
+  }
+  .particular-cell:nth-child(2n) { border-right: none; }
+  .particular-cell:nth-last-child(-n+2) { border-bottom: none; }
+  .particular-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #B76E79;
+  }
+  .particular-value {
+    font-size: 18px;
+    color: #561020;
+    margin-top: 3mm;
+  }
+  .particular-meta {
+    font-size: 12.5px;
+    color: #561020;
+    opacity: 0.55;
+    margin-top: 2mm;
+  }
+  .book-section { margin-top: 11mm; }
+  .book-cover-mini {
+    margin-top: 6mm;
+    border: 1px solid rgba(183,110,121,0.5);
+    background: #7A1F3D;
+    color: #FFF8F5;
+    padding: 6mm 8mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .book-cover-mini .who { font-size: 15px; }
+  .book-cover-mini .who .name { font-style: italic; font-size: 19px; color: #F7D6D0; display: block; margin-top: 1mm; }
+  .book-cover-mini .when { text-align: right; font-family: 'Manrope', sans-serif; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; }
+  .guest-line {
+    margin-top: 6mm;
+    font-size: 13px;
+    color: #561020;
+    opacity: 0.7;
+    line-height: 1.7;
+  }
+
+  /* ---------- PAGE 3 : CLOSING ---------- */
+  .venue-block { border-top: 1px solid rgba(86,16,32,0.15); padding-top: 8mm; }
+  .venue-name { font-size: 20px; color: #561020; margin-top: 3mm; }
+  .venue-address { font-size: 14.5px; color: #561020; opacity: 0.7; margin-top: 2mm; }
+
+  .closing {
+    margin-top: 16mm;
+    padding-top: 12mm;
+    border-top: 1px solid rgba(86,16,32,0.15);
+  }
+  .closing-message { font-size: 15px; font-style: italic; color: #561020; opacity: 0.8; line-height: 1.7; max-width: 130mm; }
+  .signature { margin-top: 8mm; display: flex; align-items: center; gap: 5mm; }
+  .signature img { height: 30px; }
+  .signature .org { font-family: 'Manrope', sans-serif; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #561020; opacity: 0.7; }
+
+  .page3-body { display: flex; flex-direction: column; height: 100%; position: relative; z-index: 1; }
+  .watermark {
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    width: 120mm;
+    opacity: 0.05;
+    z-index: 0;
+  }
+</style>
+</head>
+<body>
+
+  <!-- PAGE 1 — COVER -->
+  <div class="page">
+    <div class="frame"></div>
+    <div class="cover">
+      <img class="crest" src="file:///D:/Workspace/02-Projects/elle-world/public/elle-crest.png" alt="" />
+      <p class="eyebrow" style="margin-top:4mm;">Fairfield Charity Foundation</p>
+      <p class="cover-invite-line">Requests the Honour of the Presence of</p>
+
+      <div class="guest-block">
+        <p class="guest-honorific">The Honourable</p>
+        <p class="guest-name">Diana Nakunda Mutasingwa Kagyenyi</p>
+        <p class="guest-title">Minister of State, Office of the Vice President of Uganda</p>
+      </div>
+
+      <p class="cover-to-the">at the</p>
+      <h1>Official Flagging Off &amp; Book Launch</h1>
+      <p class="cover-of">of</p>
+
+      <div class="portrait-wrap">
+        <img class="portrait" src="file:///D:/Workspace/02-Projects/elle-world/public/heroelle.jpg" alt="" />
+      </div>
+      <p class="honouree-name script">Elle Trivia Muhoza</p>
+      <p class="eyebrow crown-label">Miss World Uganda</p>
+
+      <div class="cover-facts">
+        <span>Thursday, 6th August 2026</span>
+        <span class="dot">&#10022;</span>
+        <span>4:00 PM &ndash; 7:00 PM</span>
+        <span class="dot">&#10022;</span>
+        <span>Mestil Hotel &amp; Residences</span>
+      </div>
+      <p class="dress-code">Dress Code &mdash; Cocktail / Business</p>
+
+      <p class="cover-tagline script">&ldquo;One Story. One Nation. One Purpose.&rdquo;</p>
+      <p class="cover-host">Elle Cares Initiative</p>
+    </div>
+  </div>
+
+  <!-- PAGE 2 — THE INVITATION & PARTICULARS -->
+  <div class="page">
+    <div class="frame"></div>
+    <p class="eyebrow">The Invitation</p>
+    <h2 class="section-heading">An evening for purpose, service, and national pride.</h2>
+    <p class="body-text">
+      As Elle embarks on her journey to represent Uganda at the Miss World competition, we invite
+      you to join us for an inspiring evening celebrating purpose, service, and national pride.
+      The event will also mark the official launch of her book, sharing the story, vision, and
+      advocacy that have shaped her journey as Miss World Uganda.
+    </p>
+
+    <p class="eyebrow" style="margin-top:11mm;">Every Detail You Need</p>
+    <h3 class="section-heading" style="font-size:20px;">The Particulars</h3>
+    <div class="particulars">
+      <div class="particular-cell">
+        <p class="particular-label">Date</p>
+        <p class="particular-value">Thursday, 6th August 2026</p>
+        <p class="particular-meta">Mark your calendar</p>
+      </div>
+      <div class="particular-cell">
+        <p class="particular-label">Time</p>
+        <p class="particular-value">4:00 PM &ndash; 7:00 PM</p>
+        <p class="particular-meta">EAT (UTC+3)</p>
+      </div>
+      <div class="particular-cell">
+        <p class="particular-label">Venue</p>
+        <p class="particular-value">Mestil Hotel &amp; Residences</p>
+        <p class="particular-meta">Kampala, Uganda</p>
+      </div>
+      <div class="particular-cell">
+        <p class="particular-label">Dress Code</p>
+        <p class="particular-value">Cocktail / Business</p>
+        <p class="particular-meta">Elegant, understated</p>
+      </div>
+    </div>
+
+    <div class="book-section">
+      <p class="eyebrow">The Book Launch</p>
+      <h3 class="section-heading" style="font-size:20px;">The story behind the crown, in her own words.</h3>
+      <p class="body-text" style="margin-top:4mm;">
+        The event will also mark the official launch of her book, sharing the story, vision, and
+        advocacy that have shaped her journey as Miss World Uganda.
+      </p>
+      <div class="book-cover-mini">
+        <div class="who">
+          Miss World Uganda
+          <span class="name script">Elle Trivia Muhoza</span>
+        </div>
+        <div class="when">Official Book Launch<br />6 August 2026</div>
+      </div>
+      <p class="guest-line">
+        Join government leaders, partners, sponsors, media, former queens, friends, and
+        supporters as we officially flag Elle off to represent Uganda on the world stage and
+        celebrate the launch of her inspiring publication.
+      </p>
+    </div>
+  </div>
+
+  <!-- PAGE 3 — CLOSING -->
+  <div class="page">
+    <div class="frame"></div>
+    <img class="watermark" src="file:///D:/Workspace/02-Projects/elle-world/public/elle-crest.png" alt="" />
+    <div class="page3-body">
+      <p class="eyebrow">We Look Forward to Welcoming You</p>
+      <h2 class="section-heading">Your presence would be a distinct honour.</h2>
+      <p class="body-text" style="max-width:120mm;">
+        Uganda's leaders, partners, sponsors, media, former queens, and friends of the Elle Cares
+        Initiative will be gathered to celebrate this milestone &mdash; we would be honoured to
+        welcome you among them.
+      </p>
+
+      <div class="venue-block" style="margin-top:14mm;">
+        <p class="eyebrow">Venue</p>
+        <p class="venue-name">Mestil Hotel &amp; Residences</p>
+        <p class="venue-address">Kampala, Uganda</p>
+      </div>
+
+      <div class="closing">
+        <p class="closing-message">
+          &ldquo;We look forward to celebrating this milestone with you, as we send Elle off to
+          represent Uganda with grace, purpose, and pride.&rdquo;
+        </p>
+        <div class="signature">
+          <img src="file:///D:/Workspace/02-Projects/elle-world/public/elle-wordmark.png" alt="" />
+          <span class="org">Fairfield Charity Foundation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

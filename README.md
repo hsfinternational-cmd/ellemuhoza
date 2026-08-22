@@ -98,6 +98,37 @@ rsvp: {
 Change the coordinator here and both the button and the phone-call fallback
 link update together.
 
+## Printable invitation (PDF)
+
+[`print/invite.html`](print/invite.html) is a standalone 3-page print layout
+— cover, particulars, RSVP — built from the same brand system as the site,
+for guests who need a printable invite rather than a link. It's a plain HTML
+file, not part of the Next.js app, so it renders correctly even without a dev
+server running.
+
+For dignitaries invited in person, copy it to `print/invite-<name>.html` and:
+- Add a personalized salutation block on the cover (see
+  [`invite-hon-diana-nankunda-mutasingwa.html`](print/invite-hon-diana-nankunda-mutasingwa.html)
+  for the pattern — "Requests the Honour of the Presence of" / honorific /
+  name / title)
+- Delete the RSVP section on page 3 if the invite is being hand-delivered
+  rather than requiring a response (that file's closing page — "We Look
+  Forward to Welcoming You" — is a ready-made replacement)
+
+Regenerate the PDF after editing (there's no ImageMagick/wkhtmltopdf here, so
+this uses whatever Chrome is installed):
+
+```bash
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="print/elle-invite.pdf" --virtual-time-budget=10000 --user-data-dir="%TEMP%\chrome-print-profile" "file:///D:/Workspace/02-Projects/elle-world/print/invite.html"
+```
+
+(swap the last two paths for whichever HTML file and output name you want).
+The `--user-data-dir` pointing at a scratch folder matters — without it,
+Chrome silently hands the command to any already-running Chrome window
+instead of actually rendering the PDF. Generated PDFs aren't committed
+(it's a build artifact of the HTML); regenerate it whenever the wording
+changes.
+
 ## Add to calendar
 
 `/api/calendar` generates an RFC 5545 `.ics` file from the same event data,

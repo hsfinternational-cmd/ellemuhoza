@@ -37,6 +37,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# generated print PDF — regenerate from print/invite.html
+/print/*.pdf
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+.env*
