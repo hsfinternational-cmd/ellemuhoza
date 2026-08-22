@@ -1,68 +1,47 @@
 import { event } from "@/lib/event";
 
-/**
- * Full-bleed opening. The backdrop is a layered gradient stage by default;
- * setting `heroImage` in lib/event.ts swaps a photograph in behind the same
- * vignette and rose-gold frame.
- */
 export function Hero() {
   return (
-    <section className="relative flex min-h-[88svh] items-center justify-center overflow-hidden bg-deep-wine px-6 py-24 text-ivory">
+    <section className="relative flex min-h-[92svh] items-center justify-center overflow-hidden bg-deep-wine px-6 py-20 text-ivory">
       <Backdrop />
 
-      <div className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center">
-        <p className="eyebrow text-rose-gold">{event.host}</p>
+      <div className="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
+        <p className="eyebrow text-rose-gold">{event.crown}</p>
 
         <div className="mt-7 flex w-full max-w-xs items-center gap-4 sm:max-w-sm">
           <span className="rule-gold flex-1" />
           <span className="font-serif text-sm tracking-[0.2em] text-blush/80 uppercase">
-            Cordially invites you
+            Road to the 73rd Miss World
           </span>
           <span className="rule-gold flex-1" />
         </div>
 
-        <p className="mt-8 font-serif text-lg font-light tracking-[0.12em] text-blush/90 uppercase">
-          to the
-        </p>
-
-        <h1 className="mt-3 font-display text-4xl leading-[1.08] font-normal text-balance sm:text-6xl lg:text-7xl">
-          {event.title}
+        <h1 className="animate-shimmer mt-8 bg-[linear-gradient(100deg,var(--color-rose-gold)_0%,var(--color-soft-rose)_20%,#fff5f2_35%,var(--color-soft-rose)_50%,var(--color-rose-gold)_70%)] bg-clip-text script text-6xl leading-[1.12] text-transparent sm:text-7xl lg:text-8xl">
+          {event.honouree}
         </h1>
 
-        <p className="mt-10 font-serif text-base tracking-[0.28em] text-blush/70 uppercase">
-          of
+        <p className="mt-8 max-w-3xl font-display text-3xl leading-tight text-balance text-ivory sm:text-5xl">
+          {event.title}
         </p>
 
-        <p className="animate-shimmer mt-2 bg-[linear-gradient(100deg,var(--color-rose-gold)_0%,var(--color-soft-rose)_20%,#fff5f2_35%,var(--color-soft-rose)_50%,var(--color-rose-gold)_70%)] bg-clip-text script text-6xl leading-[1.25] text-transparent sm:text-7xl lg:text-8xl">
-          {event.honouree}
+        <p className="mt-8 max-w-2xl font-serif text-xl leading-relaxed font-light text-blush/85 sm:text-2xl">
+          {event.intro}
         </p>
-
-        <p className="eyebrow mt-6 text-ivory/80">{event.crown}</p>
-
-        <div className="mt-12 flex flex-col items-center gap-3 font-serif text-lg text-blush/90 sm:flex-row sm:gap-5 sm:text-xl">
-          <span>{event.dateLabel}</span>
-          <span aria-hidden className="hidden text-rose-gold sm:inline">
-            ·
-          </span>
-          <span>{event.timeLabel}</span>
-          <span aria-hidden className="hidden text-rose-gold sm:inline">
-            ·
-          </span>
-          <span>{event.venueLabel}</span>
-        </div>
 
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row">
           <a
-            href="#rsvp"
+            href="#purpose"
             className="eyebrow rounded-full bg-rose-gold px-10 py-4 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:bg-soft-rose focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
           >
-            RSVP
+            Read her story
           </a>
           <a
-            href="#invitation"
+            href="/docs/spoiler-alert-you-survived.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
             className="eyebrow rounded-full border border-ivory/30 px-10 py-4 text-ivory/90 transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
           >
-            The Invitation
+            Open the book
           </a>
         </div>
       </div>

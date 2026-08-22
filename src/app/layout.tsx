@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
-import { IntroGate } from "@/components/intro-gate";
 import { event } from "@/lib/event";
 import "./globals.css";
 
@@ -20,13 +19,14 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const description = `${event.host} cordially invites you to the ${event.title} of ${event.honouree}, ${event.crown} — ${event.dateLabel}, ${event.timeLabel}, ${event.venueLabel}, ${event.venueCity}.`;
+const description =
+  "Official platform for Elle Trivia Muhoza, Miss World Uganda, sharing her advocacy for safety, healing, dignity, and financial freedom for women and girls.";
 
 export const metadata: Metadata = {
-  title: `${event.honouree} — ${event.title} | ${event.crown}`,
+  title: `${event.honouree} — ${event.crown}`,
   description,
   openGraph: {
-    title: `${event.title} · ${event.honouree}`,
+    title: `${event.honouree} · ${event.crown}`,
     description,
     type: "website",
   },
@@ -43,19 +43,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${cormorant.variable} ${manrope.variable} scroll-smooth antialiased`}
     >
       <head>
-        {/* Scroll-reveal and the unseal gate both park content at opacity 0
-            until JS releases it. With scripting off neither ever will, so
-            un-hide everything and drop the (now non-functional) gate button
-            unconditionally in that case. */}
+        {/* Scroll-reveal parks content at opacity 0 until JS releases it. With
+            scripting off, un-hide everything so the public page stays readable. */}
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<style>[data-reveal]{opacity:1 !important;transform:none !important}.intro-gate{display:none !important}.intro-content{opacity:1 !important;transform:none !important}</style>`,
+            __html: `<style>[data-reveal]{opacity:1 !important;transform:none !important}</style>`,
           }}
         />
       </head>
-      <body className="flex min-h-svh flex-col">
-        <IntroGate>{children}</IntroGate>
-      </body>
+      <body className="flex min-h-svh flex-col">{children}</body>
     </html>
   );
 }

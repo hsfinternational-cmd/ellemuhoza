@@ -3,7 +3,10 @@ import { advocacy } from "@/lib/event";
 
 export function Advocacy() {
   return (
-    <section className="bg-ivory px-6 py-24 text-deep-wine sm:py-32">
+    <section
+      id="purpose"
+      className="scroll-mt-20 bg-ivory px-6 py-24 text-deep-wine sm:py-32"
+    >
       <div className="mx-auto max-w-6xl">
         <Reveal className="max-w-3xl">
           <p className="eyebrow text-rose-gold">{advocacy.eyebrow}</p>

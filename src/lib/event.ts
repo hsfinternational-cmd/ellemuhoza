@@ -1,11 +1,11 @@
 /**
- * Single source of truth for the invitation. Every section reads from here,
- * so a change of venue or time only ever needs one edit.
+ * Single source of truth for Elle's public site. Every section reads from
+ * here, so core copy, links, and downloads stay easy to update.
  */
 
 export const event = {
   host: "Fairfield Charity Foundation",
-  title: "Official Flagging Off & Book Launch",
+  title: "Aviator. Entrepreneur. Advocate.",
   honouree: "Elle Trivia Muhoza",
   crown: "Miss World Uganda",
   competition: "Miss World",
@@ -46,7 +46,7 @@ export const event = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Mestil+Hotel+%26+Residences+Kampala",
 
-  /** RSVPs are handled by Tracy directly over WhatsApp rather than a form. */
+  /** Legacy event contact, retained for printable invite files if needed. */
   rsvp: {
     contactName: "Tracy Mutoni",
     /** Shown to guests as a readable fallback number. */
@@ -56,8 +56,8 @@ export const event = {
   },
 
   intro:
-    "As Elle embarks on her journey to represent Uganda at the Miss World competition, we invite you to join us for an inspiring evening celebrating the advocacy behind the crown: safety, dignity, healing, and economic freedom for women and girls.",
-  book: "The event will also mark the official launch of Spoiler Alert: You Survived, her book on healing, growth, confidence, and the long, courageous work of remembering your value.",
+    "Elle carries Uganda on the world stage with a mission shaped by courage: protecting women and girls, building financial independence, and turning survival into purpose.",
+  book: "Spoiler Alert: You Survived is Elle's book on healing, growth, confidence, and the long, courageous work of remembering your value.",
   guests:
     "Join government leaders, partners, sponsors, media, former queens, friends, and supporters as we officially flag Elle off to represent Uganda on the world stage and stand with the purpose she carries.",
 } as const;
@@ -101,3 +101,72 @@ export const advocacy = {
     },
   ],
 } as const;
+
+export const resources = [
+  {
+    label: "Spoiler Alert: You Survived",
+    meta: "Elle's book on healing, confidence, and survival",
+    href: "/docs/spoiler-alert-you-survived.pdf",
+  },
+  {
+    label: "Elle Muhoza Profile 2026",
+    meta: "Full profile, platform, achievements, and partnerships",
+    href: "/docs/elle-muhoza-profile-2026.pdf",
+  },
+  {
+    label: "Impact Profile 2026",
+    meta: "Advocacy background and community impact work",
+    href: "/docs/elle-muhoza-impact-profile-2026.pdf",
+  },
+  {
+    label: "Send-Off Booklet",
+    meta: "Programme booklet and event-facing profile",
+    href: "/docs/elle-sendoff-booklet.pdf",
+  },
+] as const;
+
+export const socialLinks = [
+  {
+    label: "Instagram",
+    meta: "@muhozatriviaelle",
+    href: "https://instagram.com/muhozatriviaelle",
+  },
+  {
+    label: "TikTok",
+    meta: "@muhozatriviaelle",
+    href: "https://tiktok.com/@muhozatriviaelle",
+  },
+  {
+    label: "X",
+    meta: "@muhozatriviaelle",
+    href: "https://x.com/muhozatriviaelle",
+  },
+  {
+    label: "Threads",
+    meta: "@muhozatriviaelle",
+    href: "https://threads.net/@muhozatriviaelle",
+  },
+] as const;
+
+export const organizationLinks = [
+  {
+    label: "Fairfield Charity Foundation",
+    meta: "School fees, health, and community welfare",
+    href: "https://fairfieldcharityfoundation.online",
+  },
+  {
+    label: "Elle Cares Initiative",
+    meta: "@ellecares1",
+    href: "https://instagram.com/ellecares1",
+  },
+  {
+    label: "Fairfield on Instagram",
+    meta: "@fairfield.charity_foundation",
+    href: "https://instagram.com/fairfield.charity_foundation",
+  },
+  {
+    label: "Elle Lip Care",
+    meta: "@ellelipcare",
+    href: "https://instagram.com/ellelipcare",
+  },
+] as const;

@@ -16,24 +16,16 @@ function escape(text: string) {
     .replace(/\n/g, "\\n");
 }
 
-/**
- * RFC 5545 caps a content line at 75 octets; longer lines are folded by
- * inserting CRLF followed by a single space, which strict clients (Outlook)
- * require. Counts UTF-8 bytes rather than characters so multi-byte glyphs
- * such as the em dash can't push a line over the limit.
- */
 function fold(line: string) {
   const bytes = Buffer.from(line, "utf8");
   if (bytes.length <= 75) return line;
 
   const chunks: string[] = [];
   let start = 0;
-  // First line takes 75 octets, continuations 74 (the leading space counts).
   let limit = 75;
 
   while (start < bytes.length) {
     let end = Math.min(start + limit, bytes.length);
-    // Never split in the middle of a UTF-8 sequence.
     while (end > start && end < bytes.length && (bytes[end] & 0xc0) === 0x80) {
       end--;
     }
@@ -46,7 +38,7 @@ function fold(line: string) {
 }
 
 export function GET() {
-  const description = `${event.intro}\n\n${event.book}\n\nDress code: ${event.dressCode}\n\n${event.tagline}`;
+  const description = `${event.intro}\n\n${event.book}\n\n${event.tagline}`;
 
   const ics = [
     "BEGIN:VCALENDAR",
@@ -59,7 +51,7 @@ export function GET() {
     `DTSTAMP:${toIcsUtc(new Date("2026-08-04T00:00:00Z"))}`,
     `DTSTART:${toIcsUtc(event.startsAt)}`,
     `DTEND:${toIcsUtc(event.endsAt)}`,
-    `SUMMARY:${escape(`${event.title} — ${event.honouree}, ${event.crown}`)}`,
+    `SUMMARY:${escape(`${event.honouree} — ${event.crown}`)}`,
     `DESCRIPTION:${escape(description)}`,
     `LOCATION:${escape(`${event.venueLabel}, ${event.venueCity}`)}`,
     "STATUS:CONFIRMED",
@@ -72,7 +64,7 @@ export function GET() {
   return new Response(ics, {
     headers: {
       "Content-Type": "text/calendar; charset=utf-8",
-      "Content-Disposition": 'attachment; filename="elle-flagging-off.ics"',
+      "Content-Disposition": 'attachment; filename="elle-calendar.ics"',
     },
   });
 }

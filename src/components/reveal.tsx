@@ -16,7 +16,7 @@ type RevealProps = {
 /**
  * Reveals its children once they scroll into view, then stops observing.
  *
- * Invisible-by-default content is a liability on an invitation, so the hidden
+ * Invisible-by-default content is a liability on a public page, so the hidden
  * state is layered behind three guards: it only applies when JS has run (the
  * `data-js` flag set in the root layout), it is skipped entirely under
  * prefers-reduced-motion, and anything already on screen at mount is revealed

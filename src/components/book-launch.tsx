@@ -1,22 +1,40 @@
 import { Reveal } from "@/components/reveal";
-import { event, guestList } from "@/lib/event";
+import { event } from "@/lib/event";
 
 export function BookLaunch() {
   return (
-    <section className="bg-deep-wine px-6 py-24 text-ivory sm:py-32">
+    <section id="book" className="scroll-mt-20 bg-deep-wine px-6 py-24 text-ivory sm:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2 lg:gap-24">
         <Reveal>
-          <p className="eyebrow text-rose-gold">The Book Launch</p>
+          <p className="eyebrow text-rose-gold">The Book</p>
           <h2 className="mt-6 font-display text-3xl leading-tight text-balance sm:text-5xl">
-            A book for the woman learning she survived.
+            Spoiler Alert: You Survived
           </h2>
           <span className="mt-8 block h-px w-24 bg-rose-gold/60" />
           <p className="mt-8 font-serif text-xl leading-relaxed font-light text-blush/80">
             {event.book}
           </p>
           <p className="mt-6 font-serif text-xl leading-relaxed font-light text-blush/80">
-            {event.guests}
+            The book sits alongside Elle&apos;s advocacy work: a practical reminder
+            that healing takes time, confidence can be rebuilt, and no woman has
+            to walk the journey alone.
           </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="/docs/spoiler-alert-you-survived.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="eyebrow rounded-full bg-rose-gold px-8 py-4 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:bg-soft-rose focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
+            >
+              Open PDF
+            </a>
+            <a
+              href="#resources"
+              className="eyebrow rounded-full border border-ivory/25 px-8 py-4 text-ivory/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
+            >
+              View resources
+            </a>
+          </div>
         </Reveal>
 
         <Reveal delay={160}>
@@ -39,29 +57,11 @@ export function BookLaunch() {
                 Spoiler Alert: You Survived
               </p>
               <p className="mt-1 font-serif text-lg font-light tracking-wide text-ivory/70">
-                {event.dateShort}
+                Healing. Growth. Confidence.
               </p>
             </div>
           </div>
         </Reveal>
-      </div>
-
-      <div className="mx-auto mt-24 max-w-6xl">
-        <Reveal className="text-center">
-          <p className="eyebrow text-rose-gold">In attendance</p>
-        </Reveal>
-        <ul className="mt-10 flex flex-wrap justify-center gap-3">
-          {guestList.map((guest, i) => (
-            <Reveal
-              as="li"
-              key={guest}
-              delay={i * 70}
-              className="eyebrow rounded-full border border-ivory/15 px-6 py-3 text-ivory/70"
-            >
-              {guest}
-            </Reveal>
-          ))}
-        </ul>
       </div>
     </section>
   );

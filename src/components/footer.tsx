@@ -20,14 +20,14 @@ export function Footer() {
 
       <p className="eyebrow mt-12 text-blush/60">{event.host}</p>
       <p className="mt-4 font-serif text-lg font-light text-ivory/50">
-        {event.title} · {event.dateShort}
+        {event.honouree} · {event.crown}
       </p>
       <p className="mt-1 font-serif text-lg font-light text-ivory/50">
-        {event.venueLabel}, {event.venueCity}
+        Kampala, Uganda
       </p>
 
       <p className="eyebrow mt-12 text-[0.6rem] text-ivory/30">
-        By invitation · Kindly RSVP
+        Safety · Healing · Financial freedom
       </p>
     </footer>
   );
