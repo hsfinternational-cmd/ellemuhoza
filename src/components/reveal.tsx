@@ -8,7 +8,7 @@ type RevealProps = {
   /** Stagger sibling reveals without hand-writing transition delays. */
   delay?: number;
   /** Rendered element — use "li", "section", etc. where semantics matter. */
-  as?: "div" | "section" | "li" | "p" | "span" | "header" | "footer";
+  as?: "article" | "div" | "section" | "li" | "p" | "span" | "header" | "footer";
   className?: string;
   id?: string;
 };

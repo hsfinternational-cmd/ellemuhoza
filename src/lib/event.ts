@@ -64,6 +64,16 @@ export const event = {
     "Join government leaders, partners, sponsors, media, former queens, friends, and supporters as we officially flag Elle off to represent Uganda on the world stage and stand with the purpose she carries.",
 } as const;
 
+export const siteNav = [
+  { label: "Purpose", href: "#purpose" },
+  { label: "Projects", href: "#projects" },
+  { label: "Press", href: "#press" },
+  { label: "GAL", href: "#application" },
+  { label: "Book", href: "#book" },
+  { label: "Ecosystem", href: "#ecosystem" },
+  { label: "Connect", href: "#links" },
+] as const;
+
 export const details = [
   { label: "Date", value: event.dateLabel, meta: "Mark your calendar" },
   { label: "Time", value: event.timeLabel, meta: event.timezone },
@@ -444,11 +454,11 @@ export const press = [
 
 export const application = {
   eyebrow: "The Application",
-  title: "Girl Up App",
+  title: "GAL App",
   intro:
-    "Elle's presentation describes Girl Up as a safety and empowerment application built around urgent support, financial literacy, community, and saving habits.",
-  linkLabel: "Public app link pending",
-  href: "",
+    "GAL is Elle's digital companion for safety, practical learning, community, and quiet support. The chatroom is now live, giving the platform a working space where women and girls can gather around the mission.",
+  linkLabel: "Open live app",
+  href: "https://gal-app-theta.vercel.app/room",
   features: [
     {
       label: "SOS Support",
@@ -465,6 +475,51 @@ export const application = {
     {
       label: "Savings Feature",
       text: "A simple structure for building saving habits toward practical goals.",
+    },
+  ],
+} as const;
+
+export const digitalEcosystem = {
+  eyebrow: "Digital Ecosystem",
+  title: "One official home for the app, the advocacy work, the book, and the connected projects.",
+  intro:
+    "Henry Byamukama's site works because it gives every part of the mission a clear place to live. Elle's site should do the same: visitors should be able to move from story, to impact, to tools, to proof, to action without guessing where to go next.",
+  items: [
+    {
+      label: "GAL App",
+      status: "Live app",
+      text: "Safety, learning, resources, and the new community chatroom.",
+      href: application.href,
+    },
+    {
+      label: "Fairfield Charity Foundation",
+      status: "Partner platform",
+      text: "The foundation home for education, health, dignity, and community welfare work.",
+      href: "https://fairfieldcharityfoundation.online",
+    },
+    {
+      label: "Fairfield Ambassador Profile",
+      status: "Profile page",
+      text: "Elle's official Fairfield profile and ambassador context.",
+      href: "https://fairfield-foundation-website.vercel.app/ambassador",
+    },
+    {
+      label: "Musomesa",
+      status: "Learning project",
+      text: "A digital learning pathway connected to Elle Cares and the education mission.",
+      href: "https://musomesa.jekellot888.chatgpt.site",
+    },
+    {
+      label: "Elle's Kindness Club",
+      status: "Children's book",
+      text: "A soft-copy download for children, parents, schools, and supporters.",
+      href: "/docs/elles-kindness-club.pdf",
+    },
+    {
+      label: "Official Profile",
+      status: "Download",
+      text: "A full public profile covering Elle's story, platform, and project portfolio.",
+      href: "/docs/elle-muhoza-profile-2026.pdf",
     },
   ],
 } as const;

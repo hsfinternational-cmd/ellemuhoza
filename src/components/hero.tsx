@@ -2,7 +2,10 @@ import { event } from "@/lib/event";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[92svh] items-center justify-center overflow-hidden bg-deep-wine px-6 py-20 text-ivory">
+    <section
+      id="top"
+      className="relative flex min-h-[92svh] items-center justify-center overflow-hidden bg-deep-wine px-6 py-24 text-ivory"
+    >
       <Backdrop />
 
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
@@ -33,15 +36,15 @@ export function Hero() {
             href="#purpose"
             className="eyebrow rounded-full bg-rose-gold px-10 py-4 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:bg-soft-rose focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
           >
-            Read her story
+            Explore the work
           </a>
           <a
-            href="/docs/elles-kindness-club.pdf"
+            href="https://gal-app-theta.vercel.app/room"
             target="_blank"
             rel="noreferrer noopener"
             className="eyebrow rounded-full border border-ivory/30 px-10 py-4 text-ivory/90 transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
           >
-            Open children&apos;s book
+            Open GAL app
           </a>
         </div>
       </div>

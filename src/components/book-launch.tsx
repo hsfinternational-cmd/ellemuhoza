@@ -4,7 +4,7 @@ import { bookLaunchPhotos, bookRelease } from "@/lib/event";
 export function BookLaunch() {
   return (
     <section
-      id="book-launch"
+      id="book"
       className="scroll-mt-20 bg-deep-wine px-6 py-24 text-ivory sm:py-32"
     >
       <div className="mx-auto max-w-6xl">

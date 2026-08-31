@@ -14,8 +14,8 @@ export function Links() {
             Follow Elle and the organizations behind the work.
           </h2>
           <p className="mt-8 font-serif text-xl leading-relaxed font-light text-deep-wine/75">
-            This section uses the link page already saved in Downloads as the
-            source for Elle&apos;s official social and organization links.
+            Official social links, partner platforms, and public-facing
+            organization pages connected to Elle&apos;s work.
           </p>
         </Reveal>
 
