@@ -33,8 +33,6 @@ export function Resources() {
               </p>
               <a
                 href={resource.href}
-                target="_blank"
-                rel="noreferrer noopener"
                 className="eyebrow mt-8 inline-flex rounded-full bg-deep-wine px-7 py-3 text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:bg-burgundy focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ivory focus-visible:outline-none"
               >
                 Open PDF

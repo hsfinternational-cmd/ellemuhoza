@@ -239,8 +239,8 @@ export const projectPortfolio = {
       when: "Ongoing",
       where: "Schools and communities",
       text: "School and community sessions on respect, consent, equality, and healthy relationships before violence becomes normalised.",
-      evidenceLabel: "IGIHE profile",
-      href: "https://en.igihe.com/entertainment/article/miss-uganda-2025-trivia-elle-muhoza-opens-up-on-rwandan-roots-and-doja-cat-concert-video",
+      evidenceLabel: "Profile PDF",
+      href: "/docs/elle-muhoza-profile-2026.pdf",
     },
     {
       label: "Kabale and Rubanda Menstrual Health Mission",
@@ -483,7 +483,7 @@ export const digitalEcosystem = {
   eyebrow: "Digital Ecosystem",
   title: "One official home for the app, the advocacy work, the book, and the connected projects.",
   intro:
-    "Henry Byamukama's site works because it gives every part of the mission a clear place to live. Elle's site should do the same: visitors should be able to move from story, to impact, to tools, to proof, to action without guessing where to go next.",
+    "Every part of Elle's mission needs a clear place to live. Visitors should be able to move from story, to impact, to tools, to proof, to action without guessing where to go next.",
   items: [
     {
       label: "GAL App",
@@ -495,19 +495,13 @@ export const digitalEcosystem = {
       label: "Fairfield Charity Foundation",
       status: "Partner platform",
       text: "The foundation home for education, health, dignity, and community welfare work.",
-      href: "https://fairfieldcharityfoundation.online",
+      href: "https://fairfield-foundation-website.vercel.app/",
     },
     {
       label: "Fairfield Ambassador Profile",
       status: "Profile page",
       text: "Elle's official Fairfield profile and ambassador context.",
       href: "https://fairfield-foundation-website.vercel.app/ambassador",
-    },
-    {
-      label: "Musomesa",
-      status: "Learning project",
-      text: "A digital learning pathway connected to Elle Cares and the education mission.",
-      href: "https://musomesa.jekellot888.chatgpt.site",
     },
     {
       label: "Elle's Kindness Club",
@@ -536,11 +530,6 @@ export const socialLinks = [
     href: "https://tiktok.com/@muhozatriviaelle",
   },
   {
-    label: "X",
-    meta: "@muhozatriviaelle",
-    href: "https://x.com/muhozatriviaelle",
-  },
-  {
     label: "Threads",
     meta: "@muhozatriviaelle",
     href: "https://threads.net/@muhozatriviaelle",
@@ -551,7 +540,7 @@ export const organizationLinks = [
   {
     label: "Fairfield Charity Foundation",
     meta: "School fees, health, and community welfare",
-    href: "https://fairfieldcharityfoundation.online",
+    href: "https://fairfield-foundation-website.vercel.app/",
   },
   {
     label: "Elle Cares Initiative",

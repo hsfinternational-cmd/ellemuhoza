@@ -36,8 +36,6 @@ export function Press() {
               </p>
               <a
                 href={article.href}
-                target="_blank"
-                rel="noreferrer noopener"
                 className="eyebrow mt-8 inline-flex rounded-full border border-deep-wine/25 px-7 py-3 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-blush focus-visible:outline-none"
               >
                 Read article

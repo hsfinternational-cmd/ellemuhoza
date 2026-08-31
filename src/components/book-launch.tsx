@@ -25,8 +25,6 @@ export function BookLaunch() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href={bookRelease.order.href}
-                target="_blank"
-                rel="noreferrer noopener"
                 className="eyebrow inline-flex w-fit rounded-full bg-rose-gold px-8 py-4 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:bg-soft-rose focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
               >
                 {bookRelease.order.label}

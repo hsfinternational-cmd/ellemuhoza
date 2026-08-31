@@ -55,8 +55,6 @@ function LinkGroup({
           <li key={link.href}>
             <a
               href={link.href}
-              target="_blank"
-              rel="noreferrer noopener"
               className="block border-b border-deep-wine/10 pb-4 transition-colors hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none"
             >
               <span className="block font-display text-2xl">{link.label}</span>

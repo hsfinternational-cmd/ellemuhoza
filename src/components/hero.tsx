@@ -40,8 +40,6 @@ export function Hero() {
           </a>
           <a
             href="https://gal-app-theta.vercel.app/room"
-            target="_blank"
-            rel="noreferrer noopener"
             className="eyebrow rounded-full border border-ivory/30 px-10 py-4 text-ivory/90 transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
           >
             Open GAL app

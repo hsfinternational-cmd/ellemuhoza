@@ -16,8 +16,6 @@ export function Foundation() {
             </p>
             <a
               href="https://fairfield-foundation-website.vercel.app/"
-              target="_blank"
-              rel="noreferrer noopener"
               className="eyebrow mt-10 inline-flex rounded-full bg-deep-wine px-8 py-4 text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:bg-burgundy focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-blush focus-visible:outline-none"
             >
               Visit Fairfield

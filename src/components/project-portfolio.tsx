@@ -57,12 +57,6 @@ export function ProjectPortfolio() {
               </p>
               <a
                 href={project.href}
-                target={project.href.startsWith("/") ? undefined : "_blank"}
-                rel={
-                  project.href.startsWith("/")
-                    ? undefined
-                    : "noreferrer noopener"
-                }
                 className="eyebrow mt-8 inline-flex w-fit rounded-full border border-deep-wine/25 px-6 py-3 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-blush focus-visible:outline-none"
               >
                 {project.evidenceLabel}
@@ -78,12 +72,6 @@ export function ProjectPortfolio() {
               <a
                 key={reference.href}
                 href={reference.href}
-                target={reference.href.startsWith("/") ? undefined : "_blank"}
-                rel={
-                  reference.href.startsWith("/")
-                    ? undefined
-                    : "noreferrer noopener"
-                }
                 className="font-sans text-sm text-deep-wine/65 underline decoration-deep-wine/25 underline-offset-4 transition-colors hover:text-rose-gold hover:decoration-rose-gold focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none"
               >
                 {reference.label}

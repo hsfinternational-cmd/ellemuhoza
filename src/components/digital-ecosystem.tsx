@@ -29,12 +29,6 @@ export function DigitalEcosystem() {
               >
                 <a
                   href={item.href}
-                  target={item.href.startsWith("/") ? undefined : "_blank"}
-                  rel={
-                    item.href.startsWith("/")
-                      ? undefined
-                      : "noreferrer noopener"
-                  }
                   className="group block h-full p-7 focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none active:scale-[0.99] sm:p-8"
                 >
                   <div className="flex items-start justify-between gap-6">
