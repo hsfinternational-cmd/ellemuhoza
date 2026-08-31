@@ -25,20 +25,22 @@ export function Press() {
               as="li"
               key={article.href}
               delay={i * 70}
-              className="bg-blush p-8 transition-colors duration-500 hover:bg-ivory sm:p-10"
+              className="bg-blush transition-colors duration-300 hover:bg-ivory"
             >
-              <p className="eyebrow text-rose-gold">{article.source}</p>
-              <h3 className="mt-5 font-display text-2xl leading-tight text-deep-wine sm:text-3xl">
-                {article.title}
-              </h3>
-              <p className="mt-5 font-serif text-lg leading-relaxed font-light text-deep-wine/70">
-                {article.meta}
-              </p>
               <a
                 href={article.href}
-                className="eyebrow mt-8 inline-flex rounded-full border border-deep-wine/25 px-7 py-3 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-blush focus-visible:outline-none"
+                className="group block h-full p-8 focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none active:scale-[0.99] sm:p-10"
               >
-                Read article
+                <p className="eyebrow text-rose-gold">{article.source}</p>
+                <h3 className="mt-5 font-display text-2xl leading-tight text-deep-wine sm:text-3xl">
+                  {article.title}
+                </h3>
+                <p className="mt-5 font-serif text-lg leading-relaxed font-light text-deep-wine/70">
+                  {article.meta}
+                </p>
+                <span className="eyebrow mt-8 inline-flex rounded-full border border-deep-wine/25 px-7 py-3 text-deep-wine transition-[border-color,color,transform] duration-200 group-hover:-translate-y-0.5 group-hover:border-rose-gold group-hover:text-rose-gold">
+                  Read article
+                </span>
               </a>
             </Reveal>
           ))}

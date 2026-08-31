@@ -25,17 +25,19 @@ export function Resources() {
               as="li"
               key={resource.href}
               delay={i * 90}
-              className="bg-ivory p-8 transition-colors duration-500 hover:bg-blush sm:p-10"
+              className="bg-ivory transition-colors duration-300 hover:bg-blush"
             >
-              <p className="eyebrow text-rose-gold">{resource.label}</p>
-              <p className="mt-5 min-h-14 font-serif text-xl leading-relaxed font-light text-deep-wine/75">
-                {resource.meta}
-              </p>
               <a
                 href={resource.href}
-                className="eyebrow mt-8 inline-flex rounded-full bg-deep-wine px-7 py-3 text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:bg-burgundy focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ivory focus-visible:outline-none"
+                className="group block h-full p-8 focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none active:scale-[0.99] sm:p-10"
               >
-                Open PDF
+                <p className="eyebrow text-rose-gold">{resource.label}</p>
+                <p className="mt-5 min-h-14 font-serif text-xl leading-relaxed font-light text-deep-wine/75">
+                  {resource.meta}
+                </p>
+                <span className="eyebrow mt-8 inline-flex rounded-full bg-deep-wine px-7 py-3 text-ivory transition-[background-color,transform] duration-200 group-hover:-translate-y-0.5 group-hover:bg-burgundy">
+                  Open PDF
+                </span>
               </a>
             </Reveal>
           ))}

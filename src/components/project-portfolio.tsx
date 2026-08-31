@@ -43,23 +43,26 @@ export function ProjectPortfolio() {
               as="li"
               key={project.label}
               delay={(i % 4) * 70}
-              className="flex min-h-[27rem] flex-col bg-blush p-7 transition-colors duration-500 hover:bg-ivory sm:p-8"
+              className="bg-blush transition-colors duration-300 hover:bg-ivory"
             >
-              <p className="eyebrow text-rose-gold">{project.channel}</p>
-              <h3 className="mt-5 font-display text-2xl leading-tight text-deep-wine">
-                {project.label}
-              </h3>
-              <p className="mt-4 font-sans text-sm leading-relaxed text-deep-wine/55">
-                {project.when} · {project.where}
-              </p>
-              <p className="mt-5 flex-1 font-serif text-lg leading-relaxed font-light text-deep-wine/72">
-                {project.text}
-              </p>
               <a
                 href={project.href}
-                className="eyebrow mt-8 inline-flex w-fit rounded-full border border-deep-wine/25 px-6 py-3 text-deep-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-blush focus-visible:outline-none"
+                className="group flex min-h-[27rem] flex-col p-7 focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none active:scale-[0.99] sm:p-8"
+                aria-label={`${project.label}: ${project.evidenceLabel}`}
               >
-                {project.evidenceLabel}
+                <p className="eyebrow text-rose-gold">{project.channel}</p>
+                <h3 className="mt-5 font-display text-2xl leading-tight text-deep-wine">
+                  {project.label}
+                </h3>
+                <p className="mt-4 font-sans text-sm leading-relaxed text-deep-wine/55">
+                  {project.when} · {project.where}
+                </p>
+                <p className="mt-5 flex-1 font-serif text-lg leading-relaxed font-light text-deep-wine/72">
+                  {project.text}
+                </p>
+                <span className="eyebrow mt-8 inline-flex w-fit rounded-full border border-deep-wine/25 px-6 py-3 text-deep-wine transition-[border-color,color,transform] duration-200 group-hover:-translate-y-0.5 group-hover:border-rose-gold group-hover:text-rose-gold">
+                  {project.evidenceLabel}
+                </span>
               </a>
             </Reveal>
           ))}
@@ -72,7 +75,7 @@ export function ProjectPortfolio() {
               <a
                 key={reference.href}
                 href={reference.href}
-                className="font-sans text-sm text-deep-wine/65 underline decoration-deep-wine/25 underline-offset-4 transition-colors hover:text-rose-gold hover:decoration-rose-gold focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none"
+                className="inline-flex rounded-full border border-deep-wine/15 px-4 py-3 font-sans text-sm font-semibold text-deep-wine/68 transition-[border-color,color,background-color,transform] duration-200 hover:-translate-y-0.5 hover:border-rose-gold hover:bg-blush hover:text-deep-wine focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none active:scale-[0.98]"
               >
                 {reference.label}
               </a>
