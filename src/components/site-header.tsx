@@ -113,6 +113,8 @@ export function SiteHeader() {
 
         <a
           href={application.href}
+          target="_blank"
+          rel="noreferrer"
           className="hidden shrink-0 rounded-full bg-deep-wine px-5 py-3 font-sans text-xs font-semibold tracking-[0.18em] text-ivory uppercase transition-[background-color,transform] duration-200 hover:bg-burgundy focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ivory focus-visible:outline-none active:scale-[0.97] md:inline-flex"
         >
           Open GAL
@@ -143,6 +145,8 @@ export function SiteHeader() {
           ))}
           <a
             href={application.href}
+            target="_blank"
+            rel="noreferrer"
             className="mt-2 rounded-2xl bg-deep-wine px-4 py-4 text-center font-sans text-xs font-semibold tracking-[0.18em] text-ivory uppercase transition-[background-color,transform] duration-200 hover:bg-burgundy focus-visible:ring-2 focus-visible:ring-rose-gold focus-visible:outline-none active:scale-[0.99]"
           >
             Open GAL App

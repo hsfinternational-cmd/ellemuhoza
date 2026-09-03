@@ -1,4 +1,4 @@
-import { event } from "@/lib/event";
+import { application, event } from "@/lib/event";
 
 export function Hero() {
   return (
@@ -39,8 +39,10 @@ export function Hero() {
             Explore the work
           </a>
           <a
-            href="https://gal-app-theta.vercel.app/room"
-            className="eyebrow rounded-full border border-ivory/30 px-10 py-4 text-ivory/90 transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
+            href={application.href}
+            target="_blank"
+            rel="noreferrer"
+            className="eyebrow relative z-20 rounded-full border border-ivory/30 px-10 py-4 text-ivory/90 transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-gold hover:text-rose-gold focus-visible:ring-2 focus-visible:ring-ivory focus-visible:ring-offset-2 focus-visible:ring-offset-deep-wine focus-visible:outline-none"
           >
             Open GAL app
           </a>
