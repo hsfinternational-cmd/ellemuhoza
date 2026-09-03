@@ -41,10 +41,24 @@ export function TheApplication() {
               delay={i * 90}
               className="bg-deep-wine p-8 transition-colors duration-500 hover:bg-burgundy sm:p-10"
             >
-              <p className="eyebrow text-rose-gold">{feature.label}</p>
-              <p className="mt-5 font-serif text-xl leading-relaxed font-light text-blush/80">
-                {feature.text}
-              </p>
+              <a
+                href={feature.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group -m-8 flex min-h-[12rem] flex-col justify-between p-8 focus-visible:ring-2 focus-visible:ring-ivory focus-visible:outline-none sm:-m-10 sm:p-10"
+              >
+                <span>
+                  <span className="eyebrow block text-rose-gold">
+                    {feature.label}
+                  </span>
+                  <span className="mt-5 block font-serif text-xl leading-relaxed font-light text-blush/80">
+                    {feature.text}
+                  </span>
+                </span>
+                <span className="mt-8 inline-flex w-fit rounded-full border border-ivory/20 px-5 py-3 font-sans text-xs font-semibold tracking-[0.18em] text-ivory/78 uppercase transition-[border-color,color,transform] duration-200 group-hover:-translate-y-0.5 group-hover:border-rose-gold group-hover:text-rose-gold">
+                  Open in GAL
+                </span>
+              </a>
             </Reveal>
           ))}
         </ul>

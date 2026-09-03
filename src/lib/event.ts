@@ -463,18 +463,22 @@ export const application = {
     {
       label: "SOS Support",
       text: "A quick way to reach a trusted person when a woman or girl needs help.",
+      href: "https://gal-app-theta.vercel.app/support",
     },
     {
       label: "Financial Literacy",
       text: "Learning resources that support practical money confidence and independence.",
+      href: "https://gal-app-theta.vercel.app/finance",
     },
     {
       label: "Community Space",
       text: "A conversation and support space for women and girls to know they are not alone.",
+      href: "https://gal-app-theta.vercel.app/room",
     },
     {
       label: "Savings Feature",
       text: "A simple structure for building saving habits toward practical goals.",
+      href: "https://gal-app-theta.vercel.app/finance",
     },
   ],
 } as const;
